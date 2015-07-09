@@ -4,6 +4,16 @@ Created a test web server with supporting JavaScript code to show a complete wor
 
 Would also like to add a React Native application along side as well.
 
+## Install & Building JavaScript
+
+Install the npm packages and build the JavaScript:
+```bash
+npm install
+npm install -g webpack
+webpack
+```
+
+
 ## Application Structure
 
 **Pages**
