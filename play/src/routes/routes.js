@@ -1,13 +1,14 @@
 'use strict';
 
-import Index from 'react-router-proxy?name=user!../pages/index.jsx';
-import Login from 'react-router-proxy?name=user!../pages/login.jsx';
-import { Route } from 'react-router';
+import React from 'react';
+import App from '../pages/app.js';
+import Index from 'react-router-proxy?name=index!../pages/index.js';
+import Login from 'react-router-proxy?name=login!../pages/login.js';
+import { Route, DefaultRoute } from 'react-router';
 
-var routes = (
-  <Route name="/" handler={Index}>
-    <Route name="login" handler={Login}>
+module.exports = (
+  <Route name='index' path='/?' handler={App}>
+    <Route name='login' path='login' handler={Login} />
+    <DefaultRoute name='home' handler={Index} />
   </Route>
 );
-
-module.exports = routes;

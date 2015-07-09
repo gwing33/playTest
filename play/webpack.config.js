@@ -13,9 +13,7 @@ module.exports = {
     extensions: ['', '.js']
   },
   entry: {
-    app: './src/app.js',
-    index: './src/pages/index.js',
-    login: './src/pages/login.js'
+    app: './src/app.js'
   },
   output: {
     path: './public/build',
@@ -25,8 +23,9 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.css$/, loader: 'style!css' },
-      { test: /\.js$/, exclude: /node_modules/, loader: require.resolve('babel-loader') },
-      { test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
+      //{ test: /\/src\/routes\/.*/, loader: 'react-router-proxy' },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
+      //{ test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
       { test: /\.json$/, loader: 'json-loader'}
     ]
   },
