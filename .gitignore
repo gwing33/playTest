@@ -7,3 +7,8 @@ target
 /.settings
 /RUNNING_PID
 .DS_Store
+.ivy2/
+.sbt/
+node_modules/
+.npm/
+build/

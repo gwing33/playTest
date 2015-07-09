@@ -1,7 +1,8 @@
-@(message: String)
+@()
 
-@main("Welcome to Play") {
+@main("Welcome Index") {
 
-    @play20.welcome(message)
+  <div id="main"></div>
 
+  <script src="@routes.Assets.versioned("build/common.js")"></script>
 }
