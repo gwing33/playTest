@@ -22,10 +22,10 @@ Would also like to add a React Native application along side as well.
 
 
 ### Web Server TODOs
-* [x] Create Play routes
-* [x] ES6 Linting (.jshintrc)
+* [x] ~~Create Play routes~~
+* [x] ~~ES6 Linting (.jshintrc)~~
 * [ ] WebPack
-    * [x] Multiple Entries to break out JavaScript.
+    * [x] ~~Multiple Entries to break out JavaScript.~~
     * [ ] Less Styles
 * [ ] Login / Logout on Server
 * [ ] Login form on Client
