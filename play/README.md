@@ -34,9 +34,9 @@ webpack
 ### Web Server TODOs
 * [x] ~~Create Play routes~~
 * [x] ~~ES6 Linting (.jshintrc)~~
-* [ ] WebPack
+* [x] ~~WebPack~~
     * [x] ~~Multiple Entries to break out JavaScript.~~
-    * [ ] Less Styles
+    * [x] ~~Less Styles~~
 * [ ] Login / Logout on Server
 * [ ] Login form on Client
 * [ ] Add Jest Framework and tests

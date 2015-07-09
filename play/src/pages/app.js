@@ -1,3 +1,5 @@
+require('../../less/main.less');
+
 import React from 'react';
 import { RouteHandler, Link } from 'react-router';
 
