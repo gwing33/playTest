@@ -11,7 +11,6 @@ class Application extends Controller {
     Ok(views.html.index())
   }
 
-
   def login = Action {
     Ok(views.html.index())
   }
