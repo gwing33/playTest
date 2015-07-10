@@ -1,5 +1,5 @@
 import React from 'react';
-import FormStyles from '../styles/form.style.js';
+import FormStyles from '../../styles/form.style.js';
 
 class TextInput extends React.Component {
   _onChange(e) {

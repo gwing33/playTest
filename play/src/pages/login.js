@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import TextInput from '../components/TextInput.js';
+import TextInput from '../components/form/TextInput.js';
 import LayoutStyle from '../styles/layout.style.js';
 
 var styles = {
@@ -12,16 +12,17 @@ var styles = {
     top: '50%',
     marginLeft: '-115px',
     marginTop: '-260px',
-    textAlign: 'center',
-    color: '#fff'
+    textAlign: 'center'
+  },
+  title: {
+    color: '#fff',
+    marginBottom: '20px'
   },
   h1: {
-    fontSize: '24px',
-    marginBottom: '20px'
+    fontSize: '24px'
   },
   h2: {
-    fontSize: '16px',
-    marginBottom: '20px'
+    fontSize: '16px'
   }
 };
 
@@ -29,17 +30,12 @@ class Login extends React.Component {
   render() {
 
     return <div style={ LayoutStyle.center, styles.container }>
-      <div>
-        <h1 styles={styles.h1}>Play Test</h1>
-        <div>
-          <h2 styles={styles.h2}>Enter your Credentials to Login</h2>
-          <form>
-            <TextInput placeholder="Email" />
-            <TextInput placeholder="Password"/>
-          </form>
-        </div>
-      </div>
-
+      <h1 styles={[styles.title, styles.h1]}>Play Test</h1>
+      <form>
+        <h2 styles={[styles.title, styles.h2]}>Enter your Credentials to Login</h2>
+        <TextInput placeholder='Email' />
+        <TextInput placeholder='Password' type='password'/>
+      </form>
     </div>;
   }
 }
