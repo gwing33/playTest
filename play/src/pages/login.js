@@ -1,8 +1,13 @@
 'use strict';
 
 import React from 'react';
-import TextInput from '../components/form/TextInput.js';
+
 import LayoutStyle from '../styles/layout.style.js';
+
+import TextInput from '../components/form/TextInput.js';
+import SingleCheckbox from '../components/form/SingleCheckbox.js';
+import Button from '../components/form/Button.js';
+
 
 var styles = {
   container: {
@@ -35,6 +40,8 @@ class Login extends React.Component {
         <h2 styles={[styles.title, styles.h2]}>Enter your Credentials to Login</h2>
         <TextInput placeholder='Email' />
         <TextInput placeholder='Password' type='password'/>
+        <SingleCheckbox text='Remember Me' />
+        <Button styles={{ marginTop: '10px' }} value="SIGN IN" />
       </form>
     </div>;
   }

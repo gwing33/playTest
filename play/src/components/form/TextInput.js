@@ -1,7 +1,16 @@
+'use strict';
+
 import React from 'react';
 import FormStyles from '../../styles/form.style.js';
 
 class TextInput extends React.Component {
+  getDefaultProps() {
+    return {
+      placeholder: '',
+      type: 'text'
+    }
+  }
+
   _onChange(e) {
     if(typeof this.props.onChange === 'function') {
       this.props.onChange(e);
@@ -9,8 +18,8 @@ class TextInput extends React.Component {
   }
 
   render() {
-    return <input type={this.props.type || 'text'}
-                  placeholder={this.props.placeholder || ""}
+    return <input type={this.props.type}
+                  placeholder={this.props.placeholder}
                   value={this.props.value}
                   onChange={this._onChange}
                   styles={FormStyles.input} />;

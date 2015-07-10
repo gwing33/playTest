@@ -38,7 +38,8 @@ webpack
     * [x] ~~Multiple Entries to break out JavaScript.~~
     * [x] ~~Less Styles~~
 * [x] ~~Login / Logout on Server~~
-* [ ] Login form on Client
+* [x] Login form on Client
+* [ ] Work out Backend Structure
 * [ ] Add Jest Framework and tests
 * [ ] Add some mock API calls for Events (simple json list)
 * [ ] Live Reload / Modular Reloading?
