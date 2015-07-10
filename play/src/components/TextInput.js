@@ -18,7 +18,6 @@ class TextInput extends React.Component {
 }
 
 let PropTypes = React.PropTypes;
-
 TextInput.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.any,

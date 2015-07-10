@@ -39,7 +39,5 @@ module.exports = {
   stats: {
     colors: true
   },
-  watch: true,
-  keepalive: true,
   plugins: [commonsPlugin, definePlugin]
 };
