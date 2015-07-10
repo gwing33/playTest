@@ -42,6 +42,8 @@ webpack
 * [ ] Work out Backend Structure
 * [ ] Add Jest Framework and tests
 * [ ] Add some mock API calls for Events (simple json list)
+* [ ] i18n - FormatJS
+* [ ] Compile JavaScript in the cmds/build script
 * [ ] Live Reload / Modular Reloading?
 
 ### React Native
