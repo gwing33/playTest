@@ -37,7 +37,7 @@ webpack
 * [x] ~~WebPack~~
     * [x] ~~Multiple Entries to break out JavaScript.~~
     * [x] ~~Less Styles~~
-* [ ] Login / Logout on Server
+* [x] ~~Login / Logout on Server~~
 * [ ] Login form on Client
 * [ ] Add Jest Framework and tests
 * [ ] Add some mock API calls for Events (simple json list)
