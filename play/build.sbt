@@ -21,3 +21,5 @@ routesGenerator := InjectedRoutesGenerator
 
 // Help with reloading in development...
 watchSources <++= baseDirectory map { path => ((path / "public/build") ** "*.js").get }
+
+PlayKeys.fileWatchService := play.runsupport.FileWatchService.sbt(pollInterval.value)
