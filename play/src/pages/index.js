@@ -4,7 +4,7 @@ import React from 'react';
 
 class Index extends React.Component {
   render() {
-    return <div>
+    return <div className='container'>
       Hello World!!
     </div>;
   }

@@ -1,5 +1,5 @@
-require('../less/components/TextInput.less');
 import React from 'react';
+import FormStyles from '../styles/form.style.js';
 
 class TextInput extends React.Component {
   _onChange(e) {
@@ -12,7 +12,8 @@ class TextInput extends React.Component {
     return <input type={this.props.type || 'text'}
                   placeholder={this.props.placeholder || ""}
                   value={this.props.value}
-                  onChange={this._onChange} />;
+                  onChange={this._onChange}
+                  styles={FormStyles.input} />;
   }
 }
 

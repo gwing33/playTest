@@ -31,11 +31,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' }, // use ! to chain loaders
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
-      // { test: /\/src\/routes\/.*/, loader: 'react-router-proxy' },
       { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' },
-      //{ test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
       { test: /\.json$/, loader: 'json-loader'}
     ]
   },

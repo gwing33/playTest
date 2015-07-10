@@ -7,9 +7,13 @@
  */
 
 html {
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 /**
@@ -17,6 +21,7 @@ html {
  */
 
 body {
+  background-color: #15b6d0;
   margin: 0;
 }
 
