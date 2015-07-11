@@ -1,0 +1,51 @@
+{
+  login: "engineyard",
+  id: 81,
+  url: "https://api.github.com/orgs/engineyard",
+  repos_url: "https://api.github.com/orgs/engineyard/repos",
+  events_url: "https://api.github.com/orgs/engineyard/events",
+  members_url: "https://api.github.com/orgs/engineyard/members{/member}",
+  public_members_url: "https://api.github.com/orgs/engineyard/public_members{/member}",
+  avatar_url: "https://avatars.githubusercontent.com/u/81?v=3",
+  description: ""
+},
+
+
+/data/races(ids)/athletes(ids)/results
+/data/athletes(ids)/races(ids)/results
+/data/races(ids)/timers(ids)/profile/name:'joe'
+
+{
+  "data": {
+    "races": [{
+      "idx": 10,
+      "timers": [{
+        "idx":2,
+        "profile": {
+          "name"="bruce"
+        }
+      }]
+    }]
+  }
+}
+
+/* at some level we need unqie ids, and namespaced data. we want to be able to subscribe to chunks of data */
+
+uri: "server://data/races(10)/summary?depth=2&max=10"
+
+events=[{
+  time:123,
+  uri:"server://data/races(10)/timers(2)/profile/name?depth=2",
+  value:"bruce"
+}, {
+  time:124,
+  uri:"local://data/races(10)/timers(2)/profile/name",
+  value:"caitlyn"
+}, {
+  time:129,
+  uri:"server://data/races(10)/timers(2)/profile/name",
+  value:"caitlyn"
+}, {
+  uri:"local://data/races(10)/timers(3)/profile/name",
+  value:"sue"
+}]

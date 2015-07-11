@@ -21,7 +21,7 @@ _Note: replace ``build`` with ``./activator`` if you are doing development._
 docker build -t playtest .
 ```
 
-**Build out the project**
+**Run the Application**
 ```bash
 docker run -d -p 9000:9000 playtest run
 ```

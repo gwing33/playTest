@@ -5,7 +5,7 @@ See vjeux's presentation on more information: https://speakerdeck.com/vjeux/reac
 
 It's best to put styles inline the component file, but for reusability place general reusable files here.
 
-Everything should be orthoganal.
+Everything should be orthogonal.
 
 > React Style does not support CSS selectors, pseudo-classes and CSS animation. Mostly because we try to avoid implicit behaviour and want the user to make layout decisions inside the render() function.
 

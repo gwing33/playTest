@@ -20,11 +20,13 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+    "bluebird": "^2.9.33",
     "lodash": "^3.10.0",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "react-router-proxy-loader": "^0.3.0",
     "react-style": "^0.5.5",
-    "rx": "^2.5.3"
+    "rx": "^2.5.3",
+    "superagent": "^1.2.0"
   }
 }

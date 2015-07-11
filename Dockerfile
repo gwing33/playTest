@@ -13,7 +13,7 @@ RUN echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-s
 ADD play/target/universal/stage /root
 
 # Add the easy to use commands
-ADD /cmds/ /usr/local/bin/
+ADD /cmd/ /usr/local/bin/
 
 WORKDIR "/root/"
 EXPOSE 9000

@@ -33,7 +33,7 @@ RUN cd /tmp && \
 # - - -
 
 # Add the easy to use commands
-ADD /cmds/ /usr/local/bin/
+ADD /cmd/ /usr/local/bin/
 
 WORKDIR /root/
 EXPOSE 9000
