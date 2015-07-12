@@ -1,6 +1,6 @@
 import StyleSheet from 'react-style';
 
-module.exports = StyleSheet.create({
+export default StyleSheet.create({
   container: {
     maxWidth: '1200px'
   },

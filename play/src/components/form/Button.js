@@ -43,4 +43,4 @@ Button.propTypes = {
   styles: PropTypes.object
 };
 
-module.exports = Button;
+export default Button;

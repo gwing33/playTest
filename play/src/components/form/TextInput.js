@@ -33,4 +33,4 @@ TextInput.propTypes = {
   type: PropTypes.string
 };
 
-module.exports = TextInput;
+export default TextInput;

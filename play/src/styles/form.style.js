@@ -1,6 +1,6 @@
 import StyleSheet from 'react-style';
 
-module.exports = StyleSheet.create({
+export default StyleSheet.create({
   input: {
     width: '100%',
     height: '44px',

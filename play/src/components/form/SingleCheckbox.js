@@ -36,4 +36,4 @@ SingleCheckbox.propTypes = {
   onChange: PropTypes.func
 };
 
-module.exports = SingleCheckbox;
+export default SingleCheckbox;
