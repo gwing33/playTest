@@ -17,6 +17,7 @@
     "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
+    "baconjs": "^0.7.70",
     "bluebird": "^2.9.33",
     "lodash": "^3.10.0",
     "react": "^0.13.3",

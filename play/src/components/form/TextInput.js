@@ -1,5 +1,4 @@
 'use strict';
-
 import React from 'react';
 import FormStyles from '../../styles/form.style.js';
 
@@ -8,7 +7,7 @@ class TextInput extends React.Component {
     return {
       placeholder: '',
       type: 'text'
-    }
+    };
   }
 
   _onChange(e) {
