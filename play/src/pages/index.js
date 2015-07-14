@@ -1,21 +1,39 @@
 'use strict';
-
 import React from 'react';
 import plunge from '../utils/plunge';
+import StyleSheet from 'react-style';
+import LayoutStyle from '../styles/layout.style.js';
+
+import Button from '../components/form/Button.js';
+
+var styles = StyleSheet.create({
+  container: {
+    marginTop: '100px'
+  },
+
+  number: {
+    textAlign: 'center',
+    color: '#fff',
+    fontSize: '30px',
+    margin: '30px 0'
+  }
+});
 
 class Index extends React.Component {
-  _onClick() {
-    let clicks = this.props.ApiData.data.clicks || 0;
+  _onClick(e) {
+    e.preventDefault();
+    let clicks = this.props.ApiData.data.clicks;
     this.props.ApiData.store.add({ clicks: clicks + 1 });
   }
 
   render() {
     console.log('render', this.props);
     return (
-      <div className='container'>
-        Hello World!!
-        <a onClick={this._onClick.bind(this)}>Click Me!</a>
-        {this.props.ApiData.data.clicks}
+      <div styles={[ LayoutStyle.center, LayoutStyle.half, styles.container ]}>
+        <Button type="button" onClick={this._onClick.bind(this)} value="Click Me"/>
+        <div styles={styles.number}>
+          {this.props.ApiData.data.clicks}
+        </div>
       </div>
     );
   }
@@ -25,7 +43,8 @@ let ApiData = {
   name: 'ApiData',
   uri: '/api/data',
   data: {
-    isData: true
+    isData: true,
+    clicks: 0
   }
 };
 

@@ -1,9 +1,7 @@
 'use strict';
-
 import React from 'react';
-
-import LayoutStyle from '../styles/layout.style.js';
 import StyleSheet from 'react-style';
+import LayoutStyle from '../styles/layout.style.js';
 
 import TextInput from '../components/form/TextInput.js';
 import SingleCheckbox from '../components/form/SingleCheckbox.js';

@@ -1,6 +1,7 @@
 import React from 'react';
+import StyleSheet from 'react-style';
 
-var styles = {
+var styles = StyleSheet.create({
   base: {
     width: '100%',
     height: '60px',
@@ -13,15 +14,17 @@ var styles = {
     color: '#fff',
     textAlign: 'center',
     fontSize: '18px',
-    '-webkit-font-smoothing': 'antialiased',
+    fontSmoothing: 'antialiased',
   },
   primary: {},
   secondary: {}
-}
+});
 
 class Button extends React.Component {
-  getDefaultProps() {
-    return {
+  constructor(props) {
+    super(props);
+
+    this.defaultProps = {
       isPrimary: true,
       type: 'button',
       styles: {}
@@ -31,7 +34,7 @@ class Button extends React.Component {
   render() {
     let btn_styles = this.props.isPrimary ? styles.primary : styles.secondary;
 
-    return <input styles={[ styles.base, btn_styles, this.props.styles ]} type={this.props.type} value={this.props.value} />;
+    return <input onClick={this.props.onClick} styles={[ styles.base, btn_styles, this.props.styles ]} type={this.props.type} value={this.props.value} />;
   }
 }
 
