@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import Bacon from 'baconjs';
 
-var _data = [];
+var _eventData = [];
 var _events = new Bacon.Bus();
 
 var _storeContexts = {};
@@ -48,7 +48,6 @@ class StoreContext {
 }
 
 class Store {
-
   static createContext(endpoint) {
     if(!_storeContexts[endpoint.uri]) {
       _storeContexts[endpoint.uri] = new StoreContext(endpoint);
@@ -73,14 +72,16 @@ class Store {
   }
 
   static add(uri, data) {
-    _data.push({
+    let eventData = {
       uri: uri,
       data: data
-    });
-    _events.push({
-      uri: uri,
-      data: data
-    });
+    };
+    
+    // Push to the data store
+    _eventData.push(eventData);
+
+    // Push event out
+    _events.push(eventData);
   }
 
   static get(uri) {
@@ -97,7 +98,7 @@ class Store {
 
   static getEvents(uri) {
     // Find any event that matches the URI
-    return _.filter(_data, e => {
+    return _.filter(_eventData, e => {
       return e.uri === uri;
     });
   }
