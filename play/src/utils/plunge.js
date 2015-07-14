@@ -27,7 +27,6 @@ let plunge = (Component, endpoints) => {
     }
 
     _onStateChange(s, data) {
-      console.log('data change');
       let obj = {};
       obj[s.name] = {
         store: s,

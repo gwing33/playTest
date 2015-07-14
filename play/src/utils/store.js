@@ -10,6 +10,7 @@
  *  - Get, Save, Update & Delete Data?
  *  - Data Validation?
  *  - Trigger from other events?
+ *  - Local changes vs server value
  * * */
 
 'use strict';
