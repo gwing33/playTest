@@ -1,14 +1,32 @@
+/* * *
+ * Store & StoreContext
+ * - - - - - - - - - - -
+ * This is to provide a general store implimentation
+ *   to be utilized primarly in a Flux type sytem.
+ * Few key differences between a flux system and this,
+ *   is there are no actions, they get muddled into the store.
+ *
+ * TODO:
+ *  - Data Validation?
+ *  - Get, Save, Update & Delete Data?
+ *  - Trigger from other events?
+ * * */
+
 'use strict';
 import _ from 'lodash';
 import Bacon from 'baconjs';
 
 var _eventData = [];
 var _events = new Bacon.Bus();
-
 var _storeContexts = {};
 
 class StoreContext {
   constructor(endpoint) {
+    this.uri = endpoint.uri;
+    this.name = endpoint.name;
+    this.onChange = false;
+
+    // Subscribe store before getting the data.
     _events.subscribe(x => {
       if(x.valueInternal.uri === this.uri) {
         this.update(x.valueInternal.data);
@@ -18,14 +36,14 @@ class StoreContext {
       }
     }.bind(this));
 
-    this.uri = endpoint.uri;
-    this.name = endpoint.name;
     this.data = Store.get(this.uri);
-    this.onChange = false;
   }
 
   add(data) {
+    // Add to global store
     Store.add(this.uri, data);
+
+    // Update local object so we don't have to rebuild entire object.
     this.update(data);
   }
 
@@ -76,7 +94,7 @@ class Store {
       uri: uri,
       data: data
     };
-    
+
     // Push to the data store
     _eventData.push(eventData);
 

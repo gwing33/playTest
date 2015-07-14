@@ -29,12 +29,15 @@ class Index extends React.Component {
 
   render() {
     console.log('render', this.props);
+    let clicks = this.props.ApiData.data.clicks;
+    let text = clicks == 1 ? 'Beer' : 'Beers';
+
     return (
       <div styles={[ LayoutStyle.center, LayoutStyle.half, styles.container ]}>
-        <Button onClick={this._onClick.bind(this)} value="Click Me"/>
         <div styles={styles.number}>
-          {this.props.ApiData.data.clicks}
+          {clicks} {text} Donated
         </div>
+        <Button onClick={this._onClick.bind(this)} value="Donate a beer"/>
       </div>
     );
   }
