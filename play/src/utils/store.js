@@ -11,6 +11,7 @@ class StoreContext {
   constructor(endpoint) {
     _events.subscribe(x => {
       if(x.valueInternal.uri === this.uri) {
+        this.update(x.valueInternal.data);
         if(this.onChange) {
           this.onChange(this, x.valueInternal);
         }
@@ -19,18 +20,26 @@ class StoreContext {
 
     this.uri = endpoint.uri;
     this.name = endpoint.name;
+    this.data = Store.get(this.uri);
+    this.onChange = false;
   }
 
   add(data) {
     Store.add(this.uri, data);
+    this.update(data);
+  }
+
+  update(data) {
+    _.merge(this.data, data);
   }
 
   get() {
-    return Store.get(this.uri);
+    return this.data;
   }
 
-  getEvents() {
-    return Store.getEvents(this.uri);
+  rebuild() {
+    this.data = Store.get(this.uri);
+    return this.get();
   }
 
   addChangeListener(func) {
