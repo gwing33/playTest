@@ -3,13 +3,6 @@ import React from 'react';
 import FormStyles from '../../styles/form.style.js';
 
 class TextInput extends React.Component {
-  getDefaultProps() {
-    return {
-      placeholder: '',
-      type: 'text'
-    };
-  }
-
   _onChange(e) {
     if(typeof this.props.onChange === 'function') {
       this.props.onChange(e);
@@ -26,10 +19,16 @@ class TextInput extends React.Component {
 }
 
 let PropTypes = React.PropTypes;
+
 TextInput.propTypes = {
   placeholder: PropTypes.string,
   value: PropTypes.any,
   type: PropTypes.string
+};
+
+TextInput.defaultProps = {
+  placeholder: '',
+  type: 'text'
 };
 
 export default TextInput;

@@ -21,16 +21,6 @@ var styles = StyleSheet.create({
 });
 
 class Button extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.defaultProps = {
-      isPrimary: true,
-      type: 'button',
-      styles: {}
-    };
-  }
-
   render() {
     let btn_styles = this.props.isPrimary ? styles.primary : styles.secondary;
 
@@ -44,6 +34,11 @@ Button.propTypes = {
   value: PropTypes.string.isRequired,
   type: PropTypes.string,
   styles: PropTypes.object
+};
+Button.defaultProps = {
+  isPrimary: true,
+  type: 'button',
+  styles: {}
 };
 
 export default Button;

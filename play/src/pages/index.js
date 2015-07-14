@@ -22,15 +22,16 @@ var styles = StyleSheet.create({
 class Index extends React.Component {
   _onClick(e) {
     e.preventDefault();
-    let clicks = this.props.ApiData.data.clicks;
-    this.props.ApiData.store.add({ clicks: clicks + 1 });
+    this.props.ApiData.store.add({
+      clicks: this.props.ApiData.data.clicks + 1
+    });
   }
 
   render() {
     console.log('render', this.props);
     return (
       <div styles={[ LayoutStyle.center, LayoutStyle.half, styles.container ]}>
-        <Button type="button" onClick={this._onClick.bind(this)} value="Click Me"/>
+        <Button onClick={this._onClick.bind(this)} value="Click Me"/>
         <div styles={styles.number}>
           {this.props.ApiData.data.clicks}
         </div>
@@ -43,7 +44,6 @@ let ApiData = {
   name: 'ApiData',
   uri: '/api/data',
   data: {
-    isData: true,
     clicks: 0
   }
 };
